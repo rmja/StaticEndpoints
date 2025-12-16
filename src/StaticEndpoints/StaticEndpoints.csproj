@@ -8,6 +8,8 @@
     <Description>A lightweight, AOT-compatible library for organizing ASP.NET Core minimal API endpoints using source generation.</Description>
     <PackageProjectUrl>https://github.com/rmja/StaticEndpoints</PackageProjectUrl>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <RepositoryType>git</RepositoryType>
+    <RepositoryUrl>https://github.com/rmja/StaticEndpoints.git</RepositoryUrl>
     <Version>1.0.0</Version>
     <PackageReadmeFile>README.md</PackageReadmeFile>
   </PropertyGroup>
