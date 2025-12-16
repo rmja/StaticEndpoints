@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="src/Example/Example.csproj" Id="eb0ffd74-774d-43e0-b5ab-6a898ca63b37" />
+  <Project Path="src/StaticEndpoints.SourceGenerators/StaticEndpoints.SourceGenerators.csproj" Id="308aa896-5b35-4610-8a43-327536943aed" />
+  <Project Path="src/StaticEndpoints/StaticEndpoints.csproj" />
+</Solution>
