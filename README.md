@@ -2,6 +2,17 @@
 
 A lightweight, AOT-compatible library for organizing ASP.NET Core minimal API endpoints using source generation.
 
+The library consists of a single, simple interface:
+
+```csharp
+public interface IEndpoint
+{
+    static abstract void AddRoute(IEndpointRouteBuilder builder);
+}
+```
+
+That's it. Implement this interface on your endpoint classes, and the source generator handles the rest.
+
 ## Features
 
 - ✨ **AOT-Compatible**: Fully compatible with Native AOT compilation
