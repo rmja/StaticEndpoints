@@ -68,15 +68,6 @@ public class EndpointRegistrationGenerator : IIncrementalGenerator
         sb.AppendLine();
         sb.AppendLine("using Microsoft.AspNetCore.Routing;");
         sb.AppendLine("using Microsoft.Extensions.DependencyInjection;");
-        sb.AppendLine();
-
-        // Group endpoints by namespace for better organization
-        var grouped = endpoints.GroupBy(e => e.ContainingNamespace.ToDisplayString());
-
-        foreach (var group in grouped)
-        {
-            sb.AppendLine($"using {group.Key};");
-        }
 
         sb.AppendLine();
         sb.AppendLine("namespace Microsoft.AspNetCore.Routing;");
@@ -99,7 +90,7 @@ public class EndpointRegistrationGenerator : IIncrementalGenerator
         foreach (var endpoint in endpoints.OrderBy(e => e.ToDisplayString()))
         {
             var fullName = endpoint.ToDisplayString();
-            sb.AppendLine($"        {fullName}.AddRoute(builder);");
+            sb.AppendLine($"        global::{fullName}.AddRoute(builder);");
         }
 
         sb.AppendLine();
